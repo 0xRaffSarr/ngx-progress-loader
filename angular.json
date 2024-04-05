@@ -5,9 +5,14 @@
   "projects": {
     "ngx-progress-load": {
       "projectType": "library",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "root": "projects/ngx-progress-load",
       "sourceRoot": "projects/ngx-progress-load/src",
-      "prefix": "lib",
+      "prefix": "xrs",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
