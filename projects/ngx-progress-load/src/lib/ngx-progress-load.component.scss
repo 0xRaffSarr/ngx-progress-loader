@@ -1,5 +1,23 @@
 :host{
-    --orange: #FF9F1E;
-    --blue: #10b8eb;
-    --green: #18ab44;
+    --orange: #F39C12;
+    --orange-rgb: rgb(243, 156, 18);
+
+    --blue: #3498DB;
+    --blue-rgb: rgb(52, 152, 219);
+
+    --green: #27AE60;
+    --green-rgb: rgb(39, 174, 96);
+
+    --purple: #7D3C98;
+    --purple-rgb: rgb(125, 60, 152);
+
+
+    display: inline-block;
+    box-sizing: border-box;
+    aspect-ratio: 1/1;
+    min-width: 1rem;
+}
+
+div {
+    box-sizing: border-box !important;
 }

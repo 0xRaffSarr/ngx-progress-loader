@@ -1,87 +1,132 @@
-  .container {
-    display: flex;
-    height: 200px;
-    width: 200px;
-    margin: 2em auto;
-    border-radius: 100%;
+:host {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1/1;
+}
 
-    &.show-status {
-        &:after {
-            display: flex;
-            height: 80% !important;
-            width: 80% !important;
-            content: attr(data-value)'%';
-            background-color: transparent;
-            margin-left: -90%;
-            margin-top: 10%;
-            border-radius: 100%;
-            justify-content: center;
-            align-items: center;
-            font-size: 2rem;
-            color: var(--orange);
-            font-family: montserrat;
-            font-weight: bolder;
-        }
+div {
+  box-sizing: border-box;
+}
 
-        &.blue:after {
-            color: var(--blue);
-        }
-    
-        &.green:after {
-            color: var(--green);
-        }
+@property --progress {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+
+@keyframes progress-animation {
+  0% {
+    --c: calc(pi * 90 * 2);
+    --progress: calc( 1 * var(--c));
+  }
+  45% {
+    --c: calc(pi * 90 * 2);
+    --progress: calc( calc(0 / 100) * var(--c));
+  }
+  90%, 100% {
+    --c: calc(pi * 90 * 2);
+    --progress: calc(-1 * calc( 1 * var(--c)));
+  }
+}
+
+
+.container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+
+  &.show-status:not(.infinite) {
+      &:after {
+        display: flex;
+        height: 80% !important;
+        width: 80% !important;
+        content: attr(data-value)'%';
+        background-color: transparent;
+        margin-left: -90%;
+        margin-top: 10%;
+        border-radius: 100%;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        color: var(--orange);
+        font-family: montserrat;
+        font-weight: bolder;
+      }     
+
+      &.blue:after {
+          color: var(--blue);
+      }
+  
+      &.green:after {
+          color: var(--green);
+      }
+
+      &.purple::after {
+        color: var(--purple);
+      }
+  }
+}
+
+svg {
+  & circle {
+      stroke-dashoffset: 0;
+      transition: stroke-dashoffset 1.5s ease-in;
+      stroke: #c3c3c3;
+      stroke-width: 1em;
     }
-  }
-  
-  svg {
-    & circle {
-        stroke-dashoffset: 0;
-        transition: stroke-dashoffset 1.5s ease-in;
-        stroke: #c3c3c3;
-        stroke-width: 1em;
-      }
 
-      & [data-bar] {
-        stroke: var(--orange);
-        stroke-dashoffset: calc(pi * 90 * 2);
-        transform-origin: 50% 50%;
-        transform: rotateX(var(--rotateX)) rotateY(var(--rotateY)) rotateZ(var(--rotateZ));
-      }
-  }
+    & [data-bar] {
+      stroke: var(--orange);
+      stroke-dashoffset: calc(pi * 90 * 2);
+      transform-origin: 50% 50%;
+      transform: rotateX(var(--rotateX)) rotateY(var(--rotateY)) rotateZ(var(--rotateZ));
+    }
+}
 
-  
-  .blue svg [data-bar] {
-    stroke: var(--blue);
-  }
-  
-  .green svg [data-bar] {
-    stroke: var(--green);
-  }
-  
-  .top-right svg {
-    transform: rotateX(180deg) rotateY(0deg) rotateZ(90deg);
-  }
-  
-  .top-left svg {
-    transform: rotateX(180deg) rotateY(180deg) rotateZ(90deg);
-  }
-  
-  .bottom-right svg {
-    transform: rotateX(0deg) rotateY(0deg) rotateZ(90deg);
-  }
-  
-  .bottom-left svg {
-    transform: rotateX(0deg) rotateY(180deg) rotateZ(90deg);
-  }
-  
-  .left-top svg {
-    transform: rotateX(180deg) rotateY(0deg) rotateZ(0deg);
-  }
-  
-  .left-bottom svg {
-    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-  }
-  
-  .right-bottom svg {
-    transform: rotateX(0deg) rotateY(180deg) rotateZ(0deg);
-  }
+.infinite svg [data-bar] {
+  stroke-dashoffset: var(--progress);
+  animation: progress-animation 3s ease-in-out 0s infinite;
+}
+
+.blue svg [data-bar] {
+  stroke: var(--blue);
+}
+
+.green svg [data-bar] {
+  stroke: var(--green);
+}
+
+.purple svg [data-bar] {
+  stroke: var(--purple);
+}
+
+.top-right svg {
+  transform: rotateX(180deg) rotateY(0deg) rotateZ(90deg);
+}
+
+.top-left svg {
+  transform: rotateX(180deg) rotateY(180deg) rotateZ(90deg);
+}
+
+.bottom-right svg {
+  transform: rotateX(0deg) rotateY(0deg) rotateZ(90deg);
+}
+
+.bottom-left svg {
+  transform: rotateX(0deg) rotateY(180deg) rotateZ(90deg);
+}
+
+.left-top svg {
+  transform: rotateX(180deg) rotateY(0deg) rotateZ(0deg);
+}
+
+.left-bottom svg {
+  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+}
+
+.right-bottom svg {
+  transform: rotateX(0deg) rotateY(180deg) rotateZ(0deg);
+}

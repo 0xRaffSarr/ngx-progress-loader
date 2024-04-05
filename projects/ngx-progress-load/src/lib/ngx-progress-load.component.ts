@@ -16,8 +16,9 @@ import { ProgressType } from './partials/enums';
 export class NgxProgressLoadComponent implements OnInit {
   @Input() value!: number
   @Input() type: ProgressType = ProgressType.Circle;
-  @Input() color: 'orange' | 'blue' | 'green' = 'blue';
+  @Input() color: 'orange' | 'blue' | 'green' | 'purple' = 'blue';
   @Input() showStatus: boolean = false;
+  @Input() infinite: boolean = false;
 
 
   ngOnInit(): void {
