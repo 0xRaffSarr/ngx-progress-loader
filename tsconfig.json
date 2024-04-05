@@ -9,6 +9,11 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "skipLibCheck": true,
+    "paths": {
+      "ngx-progress-load": [
+        "./dist/ngx-progress-load"
+      ]
+    },
     "esModuleInterop": true,
     "sourceMap": true,
     "declaration": false,

@@ -1,0 +1,31 @@
+{
+  "name": "ngx-progress-load",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/0xRaffSarr/ngx-progress-load.git"
+  },
+  "author": {
+    "name": "Raffaele Sarracino",
+    "email": "contacts@raffaelesarracino.it",
+    "url": "https://raffaelesarracino.it"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/0xRaffSarr/ngx-progress-load/issues"
+  },
+  "keywords": [
+    "Angular",
+    "ngx",
+    "progress",
+    "loading"
+  ],
+  "peerDependencies": {
+    "@angular/common": "^17.3.0",
+    "@angular/core": "^17.3.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false
+}
