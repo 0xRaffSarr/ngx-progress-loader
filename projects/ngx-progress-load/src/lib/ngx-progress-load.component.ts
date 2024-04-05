@@ -1,16 +1,27 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+
+import { CircleProgressComponent } from './partials/circle-progress/circle-progress.component';
+
+import { ProgressType } from './partials/enums';
 
 @Component({
-  selector: 'lib-ngx-progress-load',
+  selector: 'ngx-progress-load',
   standalone: true,
-  imports: [],
-  template: `
-    <p>
-      ngx-progress-load works!
-    </p>
-  `,
-  styles: ``
+  imports: [
+    CircleProgressComponent
+  ],
+  templateUrl: './ngx-progress-load.component.html',
+  styleUrl: './ngx-progress-load.component.scss',
 })
-export class NgxProgressLoadComponent {
+export class NgxProgressLoadComponent implements OnInit {
+  @Input() value!: number
+  @Input() type: ProgressType = ProgressType.Circle;
+  @Input() color: 'orange' | 'blue' | 'green' = 'blue';
+  @Input() showStatus: boolean = false;
+
+
+  ngOnInit(): void {
+      
+  }
 
 }
