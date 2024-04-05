@@ -1,23 +1,33 @@
 <main>
     <div class="demo-container">
-        <ngx-progress-load 
-            [value]='progressValue'>
+        <ngx-progress-load
+            [value]='progressValue'
+            [showStatus]="true">
         </ngx-progress-load>
 
         <ngx-progress-load 
+            width="50"
             [value]='progressValue + 10'
             color="orange">
         </ngx-progress-load>
 
-        <ngx-progress-load 
+        <ngx-progress-load
+            width="50" 
             [value]='progressValue + 20'
             color="green">
         </ngx-progress-load>
 
         <ngx-progress-load 
+            width="50"
             [value]='progressValue + 20'
-            color="green"
+            color="purple"
             [showStatus]="true">
         </ngx-progress-load>
+
+        <ngx-progress-load
+            width="50"
+            color="blue"
+            [infinite]="true">
+        </ngx-progress-load> 
     </div>
 </main>
