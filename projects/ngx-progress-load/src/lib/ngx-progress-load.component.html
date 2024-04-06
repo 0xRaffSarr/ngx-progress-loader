@@ -14,7 +14,14 @@
     [infinite]="infinite">
 </xrs-square-progress>-->
 
-<ng-container *ngComponentOutlet="
+<ng-template #content>
+    <ng-content></ng-content>
+</ng-template>
+
+<ng-container 
+    *ngComponentOutlet="
     loadComponent;
     inputs: loaderInputs;
-    " />
+    content: outContent"
+    >
+</ng-container>

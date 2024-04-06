@@ -37,6 +37,7 @@ div {
   height: 100%;
   width: 100%;
   border-radius: 100%;
+  position: relative;
 
   &.show-status:not(.infinite) {
       &:after {
@@ -67,6 +68,20 @@ div {
       &.purple::after {
         color: var(--purple);
       }
+  }
+
+  & .out-content {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    border-radius: 100%;
+    background-color: transparent;
+    top: 10%;
+    left: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
   }
 }
 

@@ -1,5 +1,5 @@
 import { ProgressLoaderDLService } from './partials/services/progress-loader-dl.service';
-import { Component, Input, OnInit, Type, ViewChild } from '@angular/core';
+import { Component, Input, OnInit, TemplateRef, Type, ViewChild, ViewContainerRef } from '@angular/core';
 import { AsyncPipe, NgComponentOutlet } from '@angular/common';
 
 import { CircleProgressComponent } from './partials/components/circle-progress/circle-progress.component';
@@ -25,6 +25,7 @@ import { ProgressType as PType, ProgressColor as PColor } from './types/ngx-prog
 export class NgxProgressLoadComponent implements OnInit, ProgressLoader {
 
   @ViewChild('loader') private loader!: ProgressLoader; 
+  @ViewChild('content', {static: true}) contentRef!: TemplateRef<any>;
 
   @Input() value!: number
   @Input() type: PType = ProgressType.circle;
@@ -34,12 +35,19 @@ export class NgxProgressLoadComponent implements OnInit, ProgressLoader {
 
   protected loadComponent!: Type<ProgressLoader>;
 
+  protected outContent?: any[][];
+
   constructor(
-    private progressLoaderDynamic: ProgressLoaderDLService
+    private progressLoaderDynamic: ProgressLoaderDLService,
+    private vcr: ViewContainerRef,
   ) {}
 
   ngOnInit(): void {
-       this.loadComponent = this.progressLoaderDynamic.getComponent(this.type);
+      this.outContent = [
+        this.vcr.createEmbeddedView(this.contentRef).rootNodes
+      ];
+      
+      this.loadComponent = this.progressLoaderDynamic.getComponent(this.type);
   }
 
   protected get loaderInputs(): any {
@@ -50,6 +58,7 @@ export class NgxProgressLoadComponent implements OnInit, ProgressLoader {
       infinite: this.infinite
     };
   }
+
 
   runAnimation(): void {
     this.loader?.runAnimation(); 

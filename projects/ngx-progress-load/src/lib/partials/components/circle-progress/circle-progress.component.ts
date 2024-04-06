@@ -19,11 +19,21 @@ export class CircleProgressComponent implements OnInit, OnChanges, ProgressLoade
 
   @ViewChild('container', {static: true}) private container!: ElementRef;
   @ViewChild('progress', {static: true}) private progress!: ElementRef;
+  @ViewChild('refContent', {static: true}) private refContent!: ElementRef;
 
   @Input() value: number = 0;
   @Input() color: PColor = ColorType.blue;
   @Input() showStatus: boolean = false;
   @Input() infinite: boolean = false;
+
+
+  protected get showContentRef(): boolean {
+    return  this.refContent?.nativeElement ? this.refContent?.nativeElement?.children.length > 0 : false;
+  }
+
+  protected get _showStatus(): boolean {
+    return !this.showContentRef && this.showStatus;
+  } 
 
   ngOnInit(): void {
     this.runAnimation();      
