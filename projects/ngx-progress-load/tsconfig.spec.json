@@ -4,11 +4,17 @@
   "compilerOptions": {
     "outDir": "../../out-tsc/spec",
     "types": [
-      "jasmine"
+      "jasmine",
+      "ProgressColor",
+      "ProgressType"
+    ],
+    "typeRoots": [
+      "./lib/types/"
     ]
   },
   "include": [
     "**/*.spec.ts",
-    "**/*.d.ts"
+    "**/*.d.ts",
+    "./lib/types/"
   ]
 }
