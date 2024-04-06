@@ -1,6 +1,20 @@
-<xrs-circle-progress 
+<!--<xrs-circle-progress
+    #loader
     [value]="value"
     [color]="color"
     [showStatus]="showStatus"
     [infinite]="infinite">
 </xrs-circle-progress>
+
+<xrs-square-progress
+    #loader
+    [value]="value"
+    [color]="color"
+    [showStatus]="showStatus"
+    [infinite]="infinite">
+</xrs-square-progress>-->
+
+<ng-container *ngComponentOutlet="
+    loadComponent;
+    inputs: loaderInputs;
+    " />
