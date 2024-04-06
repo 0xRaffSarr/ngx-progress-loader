@@ -1,0 +1,60 @@
+@keyframes rotateRect {
+  0% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes shrinkRect {
+  0% {
+    height: 0;
+  }
+  35% {
+    height: 0;
+  }
+  95% {
+    height: 100%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+.container {
+
+  svg {
+    //animation: rotateRect 1.3s ease-in-out 0s infinite;
+    & rect {
+        transform: rotate(180deg);
+        transform-origin: center;
+        transition: height 1.5s ease-in-out;
+        fill: #c3c3c3;
+      }
+  
+    & .progress-bar {
+      fill: var(--purple);
+      height: 0%;
+      /*transform: rotateX(180deg);
+      transform-origin: 100%;*/
+      //transform: rotateX(var(--rotateX)) rotateY(var(--rotateY)) rotateZ(var(--rotateZ));
+      //animation: shrinkRect 1.3s ease-in-out 0s infinite;
+    }
+  }
+
+  &.infinite svg {
+    animation: rotateRect 1.3s ease-in-out 0s infinite;
+
+    & rect {
+      transform: rotate(0deg);
+    }
+
+    & .progress-bar {
+      animation: shrinkRect 1.3s ease-in-out 0s infinite;
+    }
+  }
+}
