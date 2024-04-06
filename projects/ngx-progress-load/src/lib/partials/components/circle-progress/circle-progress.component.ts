@@ -1,6 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, ElementRef, Input, OnChanges, OnInit, SimpleChanges, ViewChild } from '@angular/core';
 
+import { ProgressLoader } from '../../progress-loader';
+
+import { ProgressColor as PColor } from '../../../types/ngx-progress-load';
+import { ColorType } from '../../constants';
+
 @Component({
   selector: 'xrs-circle-progress',
   standalone: true,
@@ -10,22 +15,22 @@ import { Component, ElementRef, Input, OnChanges, OnInit, SimpleChanges, ViewChi
   templateUrl: './circle-progress.component.html',
   styleUrl: './circle-progress.component.scss'
 })
-export class CircleProgressComponent implements OnInit, OnChanges {
+export class CircleProgressComponent implements OnInit, OnChanges, ProgressLoader {
 
   @ViewChild('container', {static: true}) private container!: ElementRef;
   @ViewChild('progress', {static: true}) private progress!: ElementRef;
 
   @Input() value: number = 0;
-  @Input() color: 'orange' | 'blue' | 'green' | 'purple' = 'blue';
+  @Input() color: PColor = ColorType.blue;
   @Input() showStatus: boolean = false;
   @Input() infinite: boolean = false;
 
   ngOnInit(): void {
-    this.requestAnimationFrame();      
+    this.runAnimation();      
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-      this.requestAnimationFrame();
+      this.runAnimation();
   }
 
   get parsedValue(): number {
@@ -38,11 +43,11 @@ export class CircleProgressComponent implements OnInit, OnChanges {
     return this.value;
   }
 
-  requestAnimationFrame() {
+  runAnimation() {
     if(!this.infinite) {
       this.container.nativeElement.dataset.value = this.parsedValue;
 
-      const bar = this.progress.nativeElement.querySelector('[data-bar]');
+      const bar = this.progress.nativeElement.querySelector('.progress-bar');
 
       const r = bar?.getAttribute('r');
       const c = Math.PI * (r * 2);

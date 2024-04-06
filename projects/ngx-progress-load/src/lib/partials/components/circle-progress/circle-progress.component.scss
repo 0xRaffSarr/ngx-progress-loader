@@ -73,12 +73,12 @@ div {
 svg {
   & circle {
       stroke-dashoffset: 0;
-      transition: stroke-dashoffset 1.5s ease-in;
+      transition: stroke-dashoffset 1.5s ease-in-out;
       stroke: #c3c3c3;
       stroke-width: 1em;
     }
 
-    & [data-bar] {
+    & .progress-bar {
       stroke: var(--orange);
       stroke-dashoffset: calc(pi * 90 * 2);
       transform-origin: 50% 50%;
@@ -86,20 +86,20 @@ svg {
     }
 }
 
-.infinite svg [data-bar] {
+.infinite svg .progress-bar {
   stroke-dashoffset: var(--progress);
   animation: progress-animation 3s ease-in-out 0s infinite;
 }
 
-.blue svg [data-bar] {
+.blue svg .progress-bar {
   stroke: var(--blue);
 }
 
-.green svg [data-bar] {
+.green svg .progress-bar {
   stroke: var(--green);
 }
 
-.purple svg [data-bar] {
+.purple svg .progress-bar {
   stroke: var(--purple);
 }
 
