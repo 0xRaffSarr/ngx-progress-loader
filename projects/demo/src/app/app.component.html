@@ -6,28 +6,58 @@
         </ngx-progress-load>
 
         <ngx-progress-load 
-            width="50"
+            type="circle"
             [value]='progressValue + 10'
             color="orange">
         </ngx-progress-load>
 
         <ngx-progress-load
-            width="50" 
             [value]='progressValue + 20'
             color="green">
         </ngx-progress-load>
 
-        <ngx-progress-load 
-            width="50"
+        <ngx-progress-load
             [value]='progressValue + 20'
             color="purple"
             [showStatus]="true">
         </ngx-progress-load>
 
         <ngx-progress-load
-            width="50"
             color="blue"
             [infinite]="true">
-        </ngx-progress-load> 
+        </ngx-progress-load>
+    </div>
+
+    <div class="demo-container" style="margin-top: 3rem;">
+        <ngx-progress-load
+            type="square"
+            [value]='progressValue'
+            [showStatus]="true">
+        </ngx-progress-load>
+
+        <ngx-progress-load 
+            type="square"
+            [value]='progressValue + 10'
+            color="orange">
+        </ngx-progress-load>
+
+        <ngx-progress-load
+            type="square"
+            [value]='progressValue + 20'
+            color="green">
+        </ngx-progress-load>
+
+        <ngx-progress-load
+            type="square"
+            [value]='progressValue + 20'
+            color="purple"
+            [showStatus]="true">
+        </ngx-progress-load>
+
+        <ngx-progress-load
+            type="square"
+            color="blue"
+            [infinite]="true">
+        </ngx-progress-load>
     </div>
 </main>

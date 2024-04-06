@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 import { NgxProgressLoadComponent } from '../../../ngx-progress-load/src/public-api';
@@ -13,8 +13,15 @@ import { NgxProgressLoadComponent } from '../../../ngx-progress-load/src/public-
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'demo';
 
-  progressValue: number = 25;
+  progressValue: number = 0;
+
+  ngOnInit(): void {
+      const interval = setInterval(() => {
+        this.progressValue += (this.progressValue > 0) ? -50 : 50;
+      }, 3000);
+  }
+  
 }
