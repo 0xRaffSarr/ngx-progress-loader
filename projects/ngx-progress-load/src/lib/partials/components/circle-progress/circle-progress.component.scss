@@ -38,6 +38,7 @@ div {
   width: 100%;
   border-radius: 100%;
   position: relative;
+  padding: .2rem;
 
   &.show-status:not(.infinite) {
       &:after {
