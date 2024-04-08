@@ -2,7 +2,9 @@
 {
   "extends": "./tsconfig.lib.json",
   "compilerOptions": {
-    "declarationMap": false
+    "declarationMap": false,
+    "preserveSymlinks": true,
+    "outDir": "dist/ngx-progress-loader",
   },
   "angularCompilerOptions": {
     "compilationMode": "partial"

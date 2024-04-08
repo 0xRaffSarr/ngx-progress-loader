@@ -1,6 +1,6 @@
 {
   "name": "ngx-progress-load",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "^17.3.0",
     "@angular/common": "^17.3.0",
@@ -23,7 +23,7 @@
     "zone.js": "~0.14.3"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^17.3.3",
+    "@angular-devkit/build-angular": "^17.0.10",
     "@angular/cli": "^17.3.2",
     "@angular/compiler-cli": "^17.3.0",
     "@types/jasmine": "~5.1.0",
