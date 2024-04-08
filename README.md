@@ -1,10 +1,20 @@
-# Angular NgxProgressLoad: 
+# Angular Ngx-ProgressLoad
+
+How was Ngx-Progress Load born?
+
+While developing my website, I was looking for a component to use to represent my confidence level with various technologies.
+
+As you can imagine, I certainly found a ready-made component that was right for me, but what's the point of life without some difficulty? :joy:
+
+So I decided to provide my personal interpretation of the component which until then was just an idea in my head :muscle: :smile:
+
+Feel free to sift through the code :mag_right:, take inspiration, use the component, report bugs :bug: and if you like, even leave a star :star:
 
 ---
 
 Table of contents
 =================
-- [Angular NgxProgressLoad:](#angular-ngxprogressload)
+- [Angular Ngx-ProgressLoad](#angular-ngx-progressload)
 - [Table of contents](#table-of-contents)
   - [Version](#version)
   - [Browser Support](#browser-support)
@@ -14,7 +24,7 @@ Table of contents
 
 | NgxProgressLoader | Angular          |
 |:-----------------:|------------------|
-|       v1.x        | >=17.0.0 <18.0.0 |
+|       v0.x        | >=17.0.0 <18.0.0 |
 
 ## Browser Support
 
