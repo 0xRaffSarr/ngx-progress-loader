@@ -2,8 +2,8 @@ import { CommonModule } from '@angular/common';
 import { Component, ElementRef, Input, OnChanges, OnInit, SimpleChanges, ViewChild } from '@angular/core';
 
 import { ProgressLoader } from '../../progress-loader';
+import { ProgressLoadColor } from './../../types';
 
-import { ProgressColor as PColor } from '../../../types/ngx-progress-load';
 import { ColorType } from '../../constants';
 
 @Component({
@@ -22,7 +22,7 @@ export class CircleProgressComponent implements OnInit, OnChanges, ProgressLoade
   @ViewChild('refContent', {static: true}) private refContent!: ElementRef;
 
   @Input() value: number = 0;
-  @Input() color: PColor = ColorType.blue;
+  @Input() color: ProgressLoadColor = ColorType.blue;
   @Input() showStatus: boolean = false;
   @Input() infinite: boolean = false;
 

@@ -8,7 +8,7 @@ import { SquareProgressComponent } from './partials/components/square-progress/s
 import { ColorType, ProgressType } from './partials/constants';
 import { ProgressLoader } from './partials/progress-loader';
 
-import { ProgressType as PType, ProgressColor as PColor } from './types/ngx-progress-load';
+import { ProgressLoadType, ProgressLoadColor } from './partials/types';
 
 @Component({
   selector: 'ngx-progress-load',
@@ -28,8 +28,8 @@ export class NgxProgressLoadComponent implements OnInit, ProgressLoader {
   @ViewChild('content', {static: true}) contentRef!: TemplateRef<any>;
 
   @Input() value!: number
-  @Input() type: PType = ProgressType.circle;
-  @Input() color: PColor = ColorType.blue;
+  @Input() type: ProgressLoadType = ProgressType.circle;
+  @Input() color: ProgressLoadColor = ColorType.blue;
   @Input() showStatus: boolean = false;
   @Input() infinite: boolean = false;
 
