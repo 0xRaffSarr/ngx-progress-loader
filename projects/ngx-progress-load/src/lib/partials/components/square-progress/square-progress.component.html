@@ -1,6 +1,10 @@
-<div class="container top-right" [class]="color" [ngClass]="{'show-status': showStatus, 'infinite': infinite}" #container data-value="">
+<div class="container" [class]="color" [ngClass]="{'infinite': infinite}" #container data-value="">
     <svg #progress viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
         <rect width="200" height="200" x="0" y="0" rx="10" ry="10" fill="transparent" />
         <rect class="progress-bar" width="200" x="0" y="0" rx="10" ry="10" />
     </svg>
+
+    <div class="out-content" #refContent [ngClass]="{'hidden': !showContentRef}">
+        <ng-content></ng-content>
+    </div>
 </div>

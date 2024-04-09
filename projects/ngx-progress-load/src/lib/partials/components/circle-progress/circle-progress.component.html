@@ -4,9 +4,7 @@
         <circle class="progress-bar" r="90" cx="100" cy="100" fill="transparent" stroke-linecap="round" stroke-dasharray="565.48" stroke-dashoffset="0"></circle>
     </svg>
 
-    <div class="out-content" #refContent [hidden]="!showContentRef">
-        <ng-content>
-
-        </ng-content>
+    <div class="out-content" #refContent [ngClass]="{'hidden': !showContentRef}">
+        <ng-content></ng-content>
     </div>
 </div>

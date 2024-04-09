@@ -37,6 +37,8 @@ div {
   height: 100%;
   width: 100%;
   border-radius: 100%;
+  align-items: center;
+  justify-content: center;
   position: relative;
   padding: .2rem;
 
@@ -74,7 +76,6 @@ div {
   & .out-content {
     position: absolute;
     width: 80%;
-    height: 80%;
     border-radius: 100%;
     background-color: transparent;
     top: 10%;
@@ -83,6 +84,12 @@ div {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    aspect-ratio: 1 / 1 !important;
+
+    &.hidden {
+      display: block;
+      visibility: hidden;
+    }
   }
 }
 

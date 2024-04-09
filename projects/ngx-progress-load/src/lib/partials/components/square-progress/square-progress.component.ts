@@ -19,6 +19,7 @@ import { ColorType } from '../../constants';
 export class SquareProgressComponent implements OnInit, OnChanges, ProgressLoader {
 
   @ViewChild('progress', {static: true}) private progress!: ElementRef;
+  @ViewChild('refContent', {static: true}) private refContent!: ElementRef;
 
   @Input() value: number = 0;
   @Input() color: ProgressLoadColor = ColorType.blue;
@@ -31,6 +32,10 @@ export class SquareProgressComponent implements OnInit, OnChanges, ProgressLoade
 
   ngOnChanges(changes: SimpleChanges): void {
       this.runAnimation()
+  }
+
+  protected get showContentRef(): boolean {
+    return  this.refContent?.nativeElement ? this.refContent?.nativeElement?.children.length > 0 : false;
   }
 
   get parsedValue(): number {

@@ -1,8 +1,10 @@
 <main>
+    <!-- CIRCLE PROGRESS LOADER -->
     <div class="demo-container">
         <ngx-progress-load
             [value]='progressValue'
             [showStatus]="true">
+            <img src="assets/angular.svg" style="width: 3rem; height: 3rem;">
         </ngx-progress-load>
 
         <ngx-progress-load 
@@ -28,6 +30,7 @@
         </ngx-progress-load>
     </div>
 
+    <!-- SQUARE PROGRESS LOADER -->
     <div class="demo-container" style="margin-top: 3rem;">
         <ngx-progress-load
             type="square"
@@ -58,6 +61,14 @@
             type="square"
             color="blue"
             [infinite]="true">
+        </ngx-progress-load>
+
+        <ngx-progress-load
+            type="square"
+            color="blue"
+            [value]="100"
+            [infinite]="false">
+            <img src="assets/angular.svg" style="width: 3rem; height: 3rem;">
         </ngx-progress-load>
     </div>
 </main>
