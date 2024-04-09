@@ -16,10 +16,9 @@ Table of contents
 =================
 
 - [Angular Ngx-ProgressLoad](#angular-ngx-progressload)
-- [Table of contents](#table-of-contents)
-  - [Version](#version)
-  - [Browser Support](#browser-support)
-  - [Features](#features)
+- [Version](#version)
+- [Browser Support](#browser-support)
+- [Features](#features)
 
 ## Version
 
