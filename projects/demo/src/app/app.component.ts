@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
-import { NgxProgressLoaderComponent } from '../../../ngx-progress-load/src/public-api';
+import { NgxProgressLoaderComponent } from '../../../ngx-progress-loader/src/public-api';
 
 @Component({
   selector: 'app-root',

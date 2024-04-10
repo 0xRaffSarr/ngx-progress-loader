@@ -10,21 +10,21 @@
           "style": "scss"
         }
       },
-      "root": "projects/ngx-progress-load",
-      "sourceRoot": "projects/ngx-progress-load/src",
+      "root": "projects/ngx-progress-loader",
+      "sourceRoot": "projects/ngx-progress-loader/src",
       "prefix": "xrs",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "projects/ngx-progress-load/ng-package.json"
+            "project": "projects/ngx-progress-loader/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/ngx-progress-load/tsconfig.lib.prod.json"
+              "tsConfig": "projects/ngx-progress-loader/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/ngx-progress-load/tsconfig.lib.json"
+              "tsConfig": "projects/ngx-progress-loader/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -32,7 +32,7 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "tsConfig": "projects/ngx-progress-load/tsconfig.spec.json",
+            "tsConfig": "projects/ngx-progress-loader/tsconfig.spec.json",
             "polyfills": [
               "zone.js",
               "zone.js/testing"

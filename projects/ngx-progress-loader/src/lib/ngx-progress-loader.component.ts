@@ -11,7 +11,7 @@ import { ProgressLoader } from './partials/progress-loader';
 import { ProgressLoadType, ProgressLoadColor } from './partials/types';
 
 @Component({
-  selector: 'ngx-progress-load',
+  selector: 'ngx-progress-loader',
   standalone: true,
   imports: [
     NgComponentOutlet,
@@ -19,12 +19,12 @@ import { ProgressLoadType, ProgressLoadColor } from './partials/types';
     CircleProgressComponent,
     SquareProgressComponent
   ],
-  templateUrl: './ngx-progress-load.component.html',
-  styleUrl: './ngx-progress-load.component.scss',
+  templateUrl: './ngx-progress-loader.component.html',
+  styleUrl: './ngx-progress-loader.component.scss',
 })
-export class NgxProgressLoadComponent implements OnInit, ProgressLoader {
+export class NgxProgressLoaderComponent implements OnInit, ProgressLoader {
 
-  @ViewChild('loader') private loader!: ProgressLoader; 
+  @ViewChild('loader') private loader!: ProgressLoader;
   @ViewChild('content', {static: true}) contentRef!: TemplateRef<any>;
 
   @Input() value!: number
@@ -46,7 +46,7 @@ export class NgxProgressLoadComponent implements OnInit, ProgressLoader {
       this.outContent = [
         this.vcr.createEmbeddedView(this.contentRef).rootNodes
       ];
-      
+
       this.loadComponent = this.progressLoaderDynamic.getComponent(this.type);
   }
 
@@ -61,7 +61,7 @@ export class NgxProgressLoadComponent implements OnInit, ProgressLoader {
 
 
   runAnimation(): void {
-    this.loader?.runAnimation(); 
+    this.loader?.runAnimation();
   }
 
 }

@@ -1,5 +1,5 @@
 {
-  "name": "ngx-progress-load",
+  "name": "ngx-progress-loader",
   "version": "0.0.1",
   "scripts": {
     "ng": "ng",

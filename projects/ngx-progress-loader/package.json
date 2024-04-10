@@ -1,9 +1,9 @@
 {
-  "name": "ngx-progress-load",
+  "name": "ngx-progress-loader",
   "version": "0.0.1",
   "repository": {
     "type": "git",
-    "url": "https://github.com/0xRaffSarr/ngx-progress-load.git"
+    "url": "https://github.com/0xRaffSarr/ngx-progress-loader.git"
   },
   "author": {
     "name": "Raffaele Sarracino",
@@ -12,7 +12,7 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/0xRaffSarr/ngx-progress-load/issues"
+    "url": "https://github.com/0xRaffSarr/ngx-progress-loader/issues"
   },
   "keywords": [
     "Angular",

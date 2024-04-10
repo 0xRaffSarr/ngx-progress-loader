@@ -44,26 +44,27 @@ div {
 
   &.show-status:not(.infinite) {
       &:after {
+        position: absolute;
+        top: 10%;
+        left: 10%;
         display: flex;
         height: 80% !important;
         width: 80% !important;
         content: attr(data-value)'%';
         background-color: transparent;
-        margin-left: -90%;
-        margin-top: 10%;
         border-radius: 100%;
         justify-content: center;
         align-items: center;
-        font-size: 1.5rem;
+        font-size: clamp(1.5rem, 0.5rem + 0.6vw, 0.5rem);
         color: var(--orange);
         font-family: montserrat;
         font-weight: bolder;
-      }     
+      }
 
       &.blue:after {
           color: var(--blue);
       }
-  
+
       &.green:after {
           color: var(--green);
       }

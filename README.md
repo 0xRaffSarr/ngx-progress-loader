@@ -1,6 +1,6 @@
-# Angular Ngx-ProgressLoad
+# Angular Ngx-ProgressLoader
 
-How was Ngx-Progress Load born?
+How was Ngx-Progress Loader born?
 
 While developing my website, I was looking for a component to use to represent my confidence level with various technologies.
 
@@ -12,19 +12,34 @@ Feel free to sift through the code :mag_right:, take inspiration, use the compon
 
 ---
 
+## Warning
+
+The component is still under active development, and at the moment a stable version is not yet available.
+
+As a result, both the methods of use and the API may undergo significant changes.
+
+---
+
 Table of contents
 =================
 
-- [Angular Ngx-ProgressLoad](#angular-ngx-progressload)
+- [Angular Ngx-ProgressLoader](#angular-ngx-progressloader)
 - [Version](#version)
 - [Browser Support](#browser-support)
 - [Features](#features)
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Customization](#customization)
+  - [Default Color](#default-color)
+- [Demo](#demo)
+  - [Example](#example)
 
 ## Version
 
 | NgxProgressLoader | Angular          |
 |:-----------------:| ---------------- |
 | v0.x              | >=17.0.0 <18.0.0 |
+|  v1.x             |        -         |
 
 ## Browser Support
 
@@ -34,8 +49,39 @@ Table of contents
 
 ## Features
 
-- [x] Circle Load
-- [x] Square Load
+- [x] Circle Loader
+- [ ] Multi Circle Loader
+- [x] Square Loader
 - [x] Content projection
 - [x] Infinite loop animation
 - [ ] Customization
+
+## Installation
+
+`ngx-progress-loader` is available via npm
+
+Using npm:
+
+```bash
+$ npm install ngx-progress-loader --save
+```
+
+## Configuration
+
+## Customization
+
+### Default Color
+
+`ngx-progress-loader` is presented with default colors that can be used.
+
+## Demo
+
+### Example
+
+```angular2html
+  <ngx-progress-loader
+    type="circle" <!-- Type of Progress Load default Circle -->
+    [value]='progressValue'
+    color="orange"> <!-- Color of Progress Load default Blue  -->
+  </ngx-progress-loader>
+```

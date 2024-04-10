@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NgxProgressLoadComponent } from './ngx-progress-load.component';
+import { NgxProgressLoaderComponent } from './ngx-progress-loader.component';
 
 describe('NgxProgressLoadComponent', () => {
-  let component: NgxProgressLoadComponent;
-  let fixture: ComponentFixture<NgxProgressLoadComponent>;
+  let component: NgxProgressLoaderComponent;
+  let fixture: ComponentFixture<NgxProgressLoaderComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [NgxProgressLoadComponent]
+      imports: [NgxProgressLoaderComponent]
     })
     .compileComponents();
-    
-    fixture = TestBed.createComponent(NgxProgressLoadComponent);
+
+    fixture = TestBed.createComponent(NgxProgressLoaderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
