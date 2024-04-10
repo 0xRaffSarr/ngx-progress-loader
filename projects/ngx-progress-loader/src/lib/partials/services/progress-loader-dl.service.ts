@@ -1,4 +1,3 @@
-import { ProgressType } from './../constants';
 import { Injectable, Type } from '@angular/core';
 
 import { ProgressLoader } from '../progress-loader';
@@ -6,7 +5,8 @@ import { ProgressLoader } from '../progress-loader';
 import { CircleProgressComponent } from '../components/circle-progress/circle-progress.component';
 import { SquareProgressComponent } from '../components/square-progress/square-progress.component';
 
-import { ProgressLoadType } from './../types';
+import { ProgressType } from '../constants';
+import { ProgressLoadType } from '../types';
 
 @Injectable({
   providedIn: 'root'

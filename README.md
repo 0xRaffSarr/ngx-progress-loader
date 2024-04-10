@@ -80,8 +80,8 @@ $ npm install ngx-progress-loader --save
 
 ```angular2html
   <ngx-progress-loader
-    type="circle" <!-- Type of Progress Load default Circle -->
+    type="circle"
     [value]='progressValue'
-    color="orange"> <!-- Color of Progress Load default Blue  -->
+    color="orange">
   </ngx-progress-loader>
 ```

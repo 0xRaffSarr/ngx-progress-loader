@@ -2,8 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, ElementRef, Input, OnChanges, OnInit, SimpleChanges, ViewChild } from '@angular/core';
 
 import { ProgressLoader } from '../../progress-loader';
-import { ProgressLoadColor } from './../../types';
-
+import { ProgressLoadColor } from '../../types';
 import { ColorType } from '../../constants';
 
 @Component({
@@ -33,10 +32,10 @@ export class CircleProgressComponent implements OnInit, OnChanges, ProgressLoade
 
   protected get _showStatus(): boolean {
     return !this.showContentRef && this.showStatus;
-  } 
+  }
 
   ngOnInit(): void {
-    this.runAnimation();      
+    this.runAnimation();
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -61,9 +60,9 @@ export class CircleProgressComponent implements OnInit, OnChanges, ProgressLoade
 
       const r = bar?.getAttribute('r');
       const c = Math.PI * (r * 2);
-      
+
       const pct = ((100 - this.parsedValue)/100) * c;
-      
+
       requestAnimationFrame(
         () => {
           bar.style.strokeDashoffset = pct

@@ -59,10 +59,10 @@
         transition: height 1.5s ease-in-out;
         fill: #c3c3c3;
       }
-  
+
     & .progress-bar {
       //fill: var(--blue);
-      height: 0%;
+      height: 0;
       /*transform: rotateX(180deg);
       transform-origin: 100%;*/
       //transform: rotateX(var(--rotateX)) rotateY(var(--rotateY)) rotateZ(var(--rotateZ));

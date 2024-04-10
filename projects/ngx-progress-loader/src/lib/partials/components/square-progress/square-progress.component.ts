@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { ProgressLoader } from '../../progress-loader';
 
-import { ProgressLoadColor } from './../../types';
+import { ProgressLoadColor } from '../../types';
 
 import { ColorType } from '../../constants';
 

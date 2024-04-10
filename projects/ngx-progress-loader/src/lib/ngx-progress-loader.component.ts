@@ -24,7 +24,6 @@ import { ProgressLoadType, ProgressLoadColor } from './partials/types';
 })
 export class NgxProgressLoaderComponent implements OnInit, ProgressLoader {
 
-  @ViewChild('loader') private loader!: ProgressLoader;
   @ViewChild('content', {static: true}) contentRef!: TemplateRef<any>;
 
   @Input() value!: number
@@ -61,7 +60,7 @@ export class NgxProgressLoaderComponent implements OnInit, ProgressLoader {
 
 
   runAnimation(): void {
-    this.loader?.runAnimation();
+    this.loadComponent.prototype.runAnimation();
   }
 
 }
