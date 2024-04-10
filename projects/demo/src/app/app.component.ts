@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
-import { NgxProgressLoadComponent } from '../../../ngx-progress-load/src/public-api';
+import { NgxProgressLoaderComponent } from '../../../ngx-progress-load/src/public-api';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
     RouterOutlet,
-    NgxProgressLoadComponent
+    NgxProgressLoaderComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
@@ -23,5 +23,5 @@ export class AppComponent implements OnInit {
         this.progressValue += (this.progressValue > 0) ? -50 : 50;
       }, 3000);
   }
-  
+
 }
