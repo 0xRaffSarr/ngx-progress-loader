@@ -77,12 +77,12 @@ $ npm install ngx-progress-loader --save
 
 |  Color   |                                             | Default |
 |:--------:|---------------------------------------------|---------|
-| `black`  | ![black!](https://ibb.co/XDXVsWP "black")   |         |
-| `white`  | ![white!](https://ibb.co/nB3CSbN "white")   |         |
-|  `blue`  | ![blue!](https://ibb.co/mFdKd2m "blue")     | true    |
-| `orange` | ![orange!](https://ibb.co/8jX8Bnt "orange") |         |
-| `green`  | ![green!](https://ibb.co/72JvXtQ "green")   |         |
-| `purple` | ![purple!](https://ibb.co/VBRzs31 "purple") |         |
+| `black`  | ![black!](https://i.ibb.co/JqnC7cT/black.png "black")   |         |
+| `white`  | ![white!](https://i.ibb.co/jzVRFTP/white.png "white")   |         |
+|  `blue`  | ![blue!](https://i.ibb.co/LhByBcM/blue.png "blue")     | true    |
+| `orange` | ![orange!](https://i.ibb.co/vJDzBCR/orange.png "orange") |         |
+| `green`  | ![green!](https://i.ibb.co/cDcJ1hw/green.png "green")   |         |
+| `purple` | ![purple!](https://i.ibb.co/Hg6bjXS/purple.png "purple") |         |
 
 The desired color can be indicated via the `color` input. If omitted, the default coloring is used.
 
