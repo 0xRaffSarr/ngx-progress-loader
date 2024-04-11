@@ -30,7 +30,8 @@ Table of contents
 - [Installation](#installation)
 - [Configuration](#configuration)
 - [Customization](#customization)
-  - [Default Color](#default-color)
+  - [Color](#color)
+  - [Css Customization](#css-customization)
 - [Demo](#demo)
   - [Example](#example)
 
@@ -70,15 +71,39 @@ $ npm install ngx-progress-loader --save
 
 ## Customization
 
-### Default Color
+### Color
 
 `ngx-progress-loader` is presented with default colors that can be used.
+
+|  Color   |                                                                                             | Default |
+|:--------:|---------------------------------------------------------------------------------------------|---------|
+| `black`  | <div style="width: 20px; height: 20px; border-radius:5%; background-color: #1a1a1a;"></div> |         |
+| `white`  | <div style="width: 20px; height: 20px; border-radius:5%; background-color: #d9d9d9;"></div> |         |
+|  `blue`  | <div style="width: 20px; height: 20px; border-radius:5%; background-color: #3498DB;"></div> | true    |
+| `orange` | <div style="width: 20px; height: 20px; border-radius:5%; background-color: #3498DB;"></div> |         |
+| `green`  | <div style="width: 20px; height: 20px; border-radius:5%; background-color: #27AE60;"></div> |         |
+| `purple` | <div style="width: 20px; height: 20px; border-radius:5%; background-color: #7D3C98;"></div> |         |
+
+The desired color can be indicated via the `color` input. If omitted, the default coloring is used.
+
+ :bangbang: It is not currently possible to use `color` input to indicate custom colors. 
+ However, you can customize the coloring by using custom CSS rules. For more information see the section
+[Css Customization](#css-customization)
+
+```angular17html
+  <ngx-progress-loader
+    type="circle"
+    color="purple">
+  </ngx-progress-loader>
+```
+
+### CSS Customization
 
 ## Demo
 
 ### Example
 
-```angular2html
+```angular17html
   <ngx-progress-loader
     type="circle"
     [value]='progressValue'
