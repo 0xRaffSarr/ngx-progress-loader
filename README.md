@@ -75,14 +75,14 @@ $ npm install ngx-progress-loader --save
 
 `ngx-progress-loader` is presented with default colors that can be used.
 
-|  Color   |                                                                                             | Default |
-|:--------:|---------------------------------------------------------------------------------------------|---------|
-| `black`  | <div style="width: 20px; height: 20px; border-radius:5%; background-color: #1a1a1a;"></div> |         |
-| `white`  | <div style="width: 20px; height: 20px; border-radius:5%; background-color: #d9d9d9;"></div> |         |
-|  `blue`  | <div style="width: 20px; height: 20px; border-radius:5%; background-color: #3498DB;"></div> | true    |
-| `orange` | <div style="width: 20px; height: 20px; border-radius:5%; background-color: #3498DB;"></div> |         |
-| `green`  | <div style="width: 20px; height: 20px; border-radius:5%; background-color: #27AE60;"></div> |         |
-| `purple` | <div style="width: 20px; height: 20px; border-radius:5%; background-color: #7D3C98;"></div> |         |
+|  Color   |                                             | Default |
+|:--------:|---------------------------------------------|---------|
+| `black`  | ![black!](https://ibb.co/XDXVsWP "black")   |         |
+| `white`  | ![white!](https://ibb.co/nB3CSbN "white")   |         |
+|  `blue`  | ![blue!](https://ibb.co/mFdKd2m "blue")     | true    |
+| `orange` | ![orange!](https://ibb.co/8jX8Bnt "orange") |         |
+| `green`  | ![green!](https://ibb.co/72JvXtQ "green")   |         |
+| `purple` | ![purple!](https://ibb.co/VBRzs31 "purple") |         |
 
 The desired color can be indicated via the `color` input. If omitted, the default coloring is used.
 
