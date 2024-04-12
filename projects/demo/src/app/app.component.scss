@@ -5,5 +5,8 @@
 }
 
 ngx-progress-loader {
-    width: 7rem;
+  width: 7rem;
+}
+.custom-color {
+  --progress-color: #f00 !important;
 }

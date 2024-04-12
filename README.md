@@ -98,13 +98,22 @@ The desired color can be indicated via the `color` input. If omitted, the defaul
 ```
 
 ### CSS Customization
+:warning: The library is still under active development!
+Many properties may have been implemented only partially and therefore not available for all components
+
+You can customize the appearance of your components by editing the CSS custom properties.
+
+|   CSS Custom Propriety   |                                                                  Description                                                                  |
+|:------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------:|
+|    `--progress-color`    | Allows you to change the color of the Loader. You can indicate coloring in any format allowed by CSS (`hex`, `rgb/rgba`,...)<br/> :bangbang:  |
+
 
 ## Demo
 
 ### Example
 
 ```angular17html
-  <ngx-progress-loader
+  <ngx-progress-loaderThe color input takes precedence over the CSS property
     type="circle"
     [value]='progressValue'
     color="orange">

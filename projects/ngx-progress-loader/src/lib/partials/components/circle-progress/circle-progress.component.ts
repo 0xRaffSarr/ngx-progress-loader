@@ -1,9 +1,16 @@
-import { CommonModule } from '@angular/common';
-import { Component, ElementRef, Input, OnChanges, OnInit, SimpleChanges, ViewChild } from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {
+  Component,
+  ElementRef,
+  Input,
+  OnChanges,
+  OnInit,
+  SimpleChanges,
+  ViewChild,
+  ViewEncapsulation
+} from '@angular/core';
 
-import { ProgressLoader } from '../../progress-loader';
-import { ProgressLoadColor } from '../../types';
-import { ColorType } from '../../constants';
+import {ProgressLoader} from '../../progress-loader';
 
 @Component({
   selector: 'xrs-circle-progress',
@@ -12,7 +19,8 @@ import { ColorType } from '../../constants';
     CommonModule
   ],
   templateUrl: './circle-progress.component.html',
-  styleUrl: './circle-progress.component.scss'
+  styleUrls: ['./circle-progress.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class CircleProgressComponent implements OnInit, OnChanges, ProgressLoader {
 
@@ -21,7 +29,6 @@ export class CircleProgressComponent implements OnInit, OnChanges, ProgressLoade
   @ViewChild('refContent', {static: true}) private refContent!: ElementRef;
 
   @Input() value: number = 0;
-  @Input() color: ProgressLoadColor = ColorType.blue;
   @Input() showStatus: boolean = false;
   @Input() infinite: boolean = false;
 

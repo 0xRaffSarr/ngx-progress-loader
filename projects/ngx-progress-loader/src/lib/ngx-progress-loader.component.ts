@@ -1,14 +1,23 @@
-import { ProgressLoaderDLService } from './partials/services/progress-loader-dl.service';
-import { Component, Input, OnInit, TemplateRef, Type, ViewChild, ViewContainerRef } from '@angular/core';
-import { AsyncPipe, NgComponentOutlet } from '@angular/common';
+import {ProgressLoaderDLService} from './partials/services/progress-loader-dl.service';
+import {
+  Component, ElementRef,
+  Input,
+  OnInit,
+  TemplateRef,
+  Type,
+  ViewChild,
+  ViewContainerRef,
+  ViewEncapsulation,
+} from '@angular/core';
+import {AsyncPipe, NgComponentOutlet} from '@angular/common';
 
-import { CircleProgressComponent } from './partials/components/circle-progress/circle-progress.component';
-import { SquareProgressComponent } from './partials/components/square-progress/square-progress.component';
+import {CircleProgressComponent} from './partials/components/circle-progress/circle-progress.component';
+import {SquareProgressComponent} from './partials/components/square-progress/square-progress.component';
 
-import { ColorType, ProgressType } from './partials/constants';
-import { ProgressLoader } from './partials/progress-loader';
+import { ColorType, ProgressType} from './partials/constants';
+import {ProgressLoader} from './partials/progress-loader';
 
-import { ProgressLoadType, ProgressLoadColor } from './partials/types';
+import {ProgressLoadColor, ProgressLoadType} from './partials/types';
 
 @Component({
   selector: 'ngx-progress-loader',
@@ -20,15 +29,20 @@ import { ProgressLoadType, ProgressLoadColor } from './partials/types';
     SquareProgressComponent
   ],
   templateUrl: './ngx-progress-loader.component.html',
-  styleUrl: './ngx-progress-loader.component.scss',
+  styleUrls: [
+    './ngx-progress-loader.component.scss',
+    'styles/theme.scss'
+  ],
+  encapsulation: ViewEncapsulation.Emulated
 })
 export class NgxProgressLoaderComponent implements OnInit, ProgressLoader {
 
+  @ViewChild('loaderContainer', {static: true}) loaderContainer!: ElementRef;
   @ViewChild('content', {static: true}) contentRef!: TemplateRef<any>;
 
   @Input() value!: number
   @Input() type: ProgressLoadType = ProgressType.circle;
-  @Input() color: ProgressLoadColor = ColorType.blue;
+  @Input() color!: ProgressLoadColor;
   @Input() showStatus: boolean = false;
   @Input() infinite: boolean = false;
 
@@ -52,12 +66,11 @@ export class NgxProgressLoaderComponent implements OnInit, ProgressLoader {
   protected get loaderInputs(): any {
     return {
       value: this.value,
-      color: this.color,
+      //color: this.color,
       showStatus: this.showStatus,
       infinite: this.infinite
     };
   }
-
 
   runAnimation(): void {
     this.loadComponent.prototype.runAnimation();

@@ -3,9 +3,6 @@ import { CommonModule } from '@angular/common';
 
 import { ProgressLoader } from '../../progress-loader';
 
-import { ProgressLoadColor } from '../../types';
-
-import { ColorType } from '../../constants';
 
 @Component({
   selector: 'xrs-square-progress',
@@ -22,7 +19,6 @@ export class SquareProgressComponent implements OnInit, OnChanges, ProgressLoade
   @ViewChild('refContent', {static: true}) private refContent!: ElementRef;
 
   @Input() value: number = 0;
-  @Input() color: ProgressLoadColor = ColorType.blue;
   @Input() showStatus: boolean = false;
   @Input() infinite: boolean = false;
 

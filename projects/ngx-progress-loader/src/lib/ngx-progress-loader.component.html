@@ -18,10 +18,11 @@
     <ng-content></ng-content>
 </ng-template>
 
-<ng-container 
+<div #loaderContainer [class]="color">
+  <ng-container
     *ngComponentOutlet="
     loadComponent;
     inputs: loaderInputs;
-    content: outContent"
-    >
-</ng-container>
+    content: outContent">
+  </ng-container>
+</div>

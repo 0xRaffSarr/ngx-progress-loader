@@ -61,36 +61,12 @@
       }
 
     & .progress-bar {
-      //fill: var(--blue);
+      fill: var(--progress-color);
       height: 0;
       /*transform: rotateX(180deg);
       transform-origin: 100%;*/
       //transform: rotateX(var(--rotateX)) rotateY(var(--rotateY)) rotateZ(var(--rotateZ));
       //animation: shrinkRect 1.3s ease-in-out 0s infinite;
-    }
-  }
-
-  &.blue {
-    .progress-bar {
-      fill: var(--blue);
-    }
-  }
-
-  &.orange {
-    .progress-bar {
-      fill: var(--orange);
-    }
-  }
-
-  &.green {
-    .progress-bar {
-      fill: var(--green);
-    }
-  }
-
-  &.purple {
-    .progress-bar {
-      fill: var(--purple);
     }
   }
 
