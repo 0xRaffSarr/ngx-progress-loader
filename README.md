@@ -103,9 +103,9 @@ Many properties may have been implemented only partially and therefore not avail
 
 You can customize the appearance of your components by editing the CSS custom properties.
 
-|   CSS Custom Propriety   |                                                                  Description                                                                  |
-|:------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------:|
-|    `--progress-color`    | Allows you to change the color of the Loader. You can indicate coloring in any format allowed by CSS (`hex`, `rgb/rgba`,...)<br/> :bangbang:  |
+| CSS Custom Propriety |                                                                                             Description                                                                                             |
+|:--------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|  `--progress-color`  | Allows you to change the color of the Loader. You can indicate coloring in any format allowed by CSS (`hex`, `rgb/rgba`,...)<br/> :bangbang: The color input takes precedence over the CSS property |
 
 
 ## Demo
