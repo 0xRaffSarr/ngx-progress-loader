@@ -75,18 +75,18 @@ $ npm install ngx-progress-loader --save
 
 `ngx-progress-loader` is presented with default colors that can be used.
 
-|  Color   |                                             | Default |
-|:--------:|---------------------------------------------|---------|
-| `black`  | ![black!](https://i.ibb.co/JqnC7cT/black.png "black")   |         |
-| `white`  | ![white!](https://i.ibb.co/jzVRFTP/white.png "white")   |         |
-|  `blue`  | ![blue!](https://i.ibb.co/LhByBcM/blue.png "blue")     | true    |
-| `orange` | ![orange!](https://i.ibb.co/vJDzBCR/orange.png "orange") |         |
-| `green`  | ![green!](https://i.ibb.co/cDcJ1hw/green.png "green")   |         |
-| `purple` | ![purple!](https://i.ibb.co/Hg6bjXS/purple.png "purple") |         |
+|  Color   |                                                          | Hex Code | Default   |
+|:--------:|----------------------------------------------------------|----------|-----------|
+| `black`  | ![black!](https://i.ibb.co/JqnC7cT/black.png "black")    | #1a1a1a  |           |
+| `white`  | ![white!](https://i.ibb.co/jzVRFTP/white.png "white")    | #d9d9d9  |           |
+|  `blue`  | ![blue!](https://i.ibb.co/LhByBcM/blue.png "blue")       | #3498DB  | true      |
+| `orange` | ![orange!](https://i.ibb.co/vJDzBCR/orange.png "orange") | #F39C12  |           |
+| `green`  | ![green!](https://i.ibb.co/cDcJ1hw/green.png "green")    | #27AE60  |           |
+| `purple` | ![purple!](https://i.ibb.co/Hg6bjXS/purple.png "purple") | #7D3C98  |           |
 
 The desired color can be indicated via the `color` input. If omitted, the default coloring is used.
 
- :bangbang: It is not currently possible to use `color` input to indicate custom colors. 
+ :bangbang: It isn't currently possible to use `color` input to indicate custom colors. 
  However, you can customize the coloring by using custom CSS rules. For more information see the section
 [Css Customization](#css-customization)
 
