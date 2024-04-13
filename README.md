@@ -113,7 +113,7 @@ You can customize the appearance of your components by editing the CSS custom pr
 ### Example
 
 ```angular17html
-  <ngx-progress-loaderThe color input takes precedence over the CSS property
+  <ngx-progress-loader
     type="circle"
     [value]='progressValue'
     color="orange">
