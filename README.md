@@ -103,9 +103,10 @@ Many properties may have been implemented only partially and therefore not avail
 
 You can customize the appearance of your components by editing the CSS custom properties.
 
-| CSS Custom Propriety            | Description                                                                                                                                                                                         |
-|:--------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `--progress-color`              | Allows you to change the color of the Loader. You can indicate coloring in any format allowed by CSS (`hex`, `rgb/rgba`,...)<br/> :bangbang: The color input takes precedence over the CSS property |
+| CSS Custom Propriety | Description                                                                                                                                                                                         |       Support       |
+|:---------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------:|
+| `--track-color`      | Allows customization of the loader track color!<br/>Track customization can only be done through the use of custom CSS.                                                                             | :heavy_check_mark:  |
+| `--progress-color`   | Allows you to change the color of the Loader. You can indicate coloring in any format allowed by CSS (`hex`, `rgb/rgba`,...)<br/> :bangbang: The color input takes precedence over the CSS property | :heavy_check_mark:  |
 
 
 ## Demo
