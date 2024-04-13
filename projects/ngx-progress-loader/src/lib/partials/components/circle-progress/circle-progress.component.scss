@@ -4,6 +4,8 @@
   width: 100%;
   height: 100%;
   aspect-ratio: 1/1;
+
+  --radius: 90;
 }
 
 div {
@@ -18,15 +20,15 @@ div {
 
 @keyframes progress-animation {
   0% {
-    --c: calc(pi * 90 * 2);
+    --c: calc(pi * var(--radius) * 2);
     --progress: calc( 1 * var(--c));
   }
   45% {
-    --c: calc(pi * 90 * 2);
+    --c: calc(pi * var(--radius) * 2);
     --progress: calc( calc(0 / 100) * var(--c));
   }
   90%, 100% {
-    --c: calc(pi * 90 * 2);
+    --c: calc(pi * var(--radius) * 2);
     --progress: calc(-1 * calc( 1 * var(--c)));
   }
 }
@@ -60,18 +62,6 @@ div {
         font-family: montserrat;
         font-weight: bolder;
       }
-
-      /*&.blue:after {
-          color: var(--blue);
-      }
-
-      &.green:after {
-          color: var(--green);
-      }
-
-      &.purple::after {
-        color: var(--purple);
-      }*/
   }
 
   & .out-content {
@@ -102,13 +92,13 @@ svg {
   & circle {
       stroke-dashoffset: 0;
       transition: stroke-dashoffset 1.5s ease-in-out;
-      stroke: #c3c3c3;
+      stroke: var(--track-color);
       stroke-width: 1em;
     }
 
   & .progress-bar {
     stroke: var(--progress-color);
-    stroke-dashoffset: calc(pi * 90 * 2);
+    stroke-dashoffset: calc(pi * var(--radius) * 2);
     transform-origin: 50% 50%;
     transform: rotateX(var(--rotateX)) rotateY(var(--rotateY)) rotateZ(var(--rotateZ));
   }

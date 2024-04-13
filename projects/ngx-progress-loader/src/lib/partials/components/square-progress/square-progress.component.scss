@@ -52,21 +52,16 @@
   }
 
   svg {
-    //animation: rotateRect 1.3s ease-in-out 0s infinite;
     & rect {
         transform: rotate(180deg);
         transform-origin: center;
         transition: height 1.5s ease-in-out;
-        fill: #c3c3c3;
+        fill: var(--track-color);
       }
 
     & .progress-bar {
       fill: var(--progress-color);
       height: 0;
-      /*transform: rotateX(180deg);
-      transform-origin: 100%;*/
-      //transform: rotateX(var(--rotateX)) rotateY(var(--rotateY)) rotateZ(var(--rotateZ));
-      //animation: shrinkRect 1.3s ease-in-out 0s infinite;
     }
   }
 

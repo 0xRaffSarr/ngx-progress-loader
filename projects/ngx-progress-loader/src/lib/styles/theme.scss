@@ -5,6 +5,9 @@
   --white: #d9d9d9;
   --white-rgb: rgb(217, 217, 217);
 
+  --grey: #c3c3c3;
+  --grey-rgb: rgb(195, 195, 195);
+
   --blue: #3498DB;
   --blue-rgb: rgb(52, 152, 219);
 
@@ -18,6 +21,7 @@
   --purple-rgb: rgb(125, 60, 152);
 
   --progress-color: var(--blue);
+  --track-color: var(--grey)
 }
 
 .black {
