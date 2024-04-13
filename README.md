@@ -38,14 +38,14 @@ Table of contents
 ## Version
 
 | NgxProgressLoader | Angular          |
-|:-----------------:| ---------------- |
-| v0.x              | >=17.0.0 <18.0.0 |
-|  v1.x             |        -         |
+|:-----------------:|:----------------:|
+|       v1.x        |        -         |
+|       v0.x        | >=17.0.0 <18.0.0 |
 
 ## Browser Support
 
 | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>IE / Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari-ios/safari-ios_48x48.png" alt="iOS Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Safari | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png" alt="Opera" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Opera |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Latest ✔                                                                                                                                                                                                      | Latest ✔                                                                                                                                                                                                          | IE11, Edge ✔                                                                                                                                                                                                    | Latest ✔                                                                                                                                                                                                                  | Latest ✔                                                                                                                                                                                                  |
 
 ## Features
@@ -75,14 +75,14 @@ $ npm install ngx-progress-loader --save
 
 `ngx-progress-loader` is presented with default colors that can be used.
 
-|  Color   |                                                          | Hex Code | Default   |
-|:--------:|----------------------------------------------------------|----------|-----------|
-| `black`  | ![black!](https://i.ibb.co/JqnC7cT/black.png "black")    | #1a1a1a  |           |
-| `white`  | ![white!](https://i.ibb.co/jzVRFTP/white.png "white")    | #d9d9d9  |           |
-|  `blue`  | ![blue!](https://i.ibb.co/LhByBcM/blue.png "blue")       | #3498DB  | true      |
-| `orange` | ![orange!](https://i.ibb.co/vJDzBCR/orange.png "orange") | #F39C12  |           |
-| `green`  | ![green!](https://i.ibb.co/cDcJ1hw/green.png "green")    | #27AE60  |           |
-| `purple` | ![purple!](https://i.ibb.co/Hg6bjXS/purple.png "purple") | #7D3C98  |           |
+|  Color   |                                                           | Hex Code |  Default   |
+|:--------:|:---------------------------------------------------------:|:--------:|:----------:|
+| `black`  |   ![black!](https://i.ibb.co/JqnC7cT/black.png "black")   | #1a1a1a  |            |
+| `white`  |   ![white!](https://i.ibb.co/jzVRFTP/white.png "white")   | #d9d9d9  |            |
+|  `blue`  |    ![blue!](https://i.ibb.co/LhByBcM/blue.png "blue")     | #3498DB  |    true    |
+| `orange` | ![orange!](https://i.ibb.co/vJDzBCR/orange.png "orange")  | #F39C12  |            |
+| `green`  |   ![green!](https://i.ibb.co/cDcJ1hw/green.png "green")   | #27AE60  |            |
+| `purple` | ![purple!](https://i.ibb.co/Hg6bjXS/purple.png "purple")  | #7D3C98  |            |
 
 The desired color can be indicated via the `color` input. If omitted, the default coloring is used.
 
@@ -103,9 +103,9 @@ Many properties may have been implemented only partially and therefore not avail
 
 You can customize the appearance of your components by editing the CSS custom properties.
 
-| CSS Custom Propriety |                                                                                             Description                                                                                             |
-|:--------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-|  `--progress-color`  | Allows you to change the color of the Loader. You can indicate coloring in any format allowed by CSS (`hex`, `rgb/rgba`,...)<br/> :bangbang: The color input takes precedence over the CSS property |
+| CSS Custom Propriety            | Description                                                                                                                                                                                         |
+|:--------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `--progress-color`              | Allows you to change the color of the Loader. You can indicate coloring in any format allowed by CSS (`hex`, `rgb/rgba`,...)<br/> :bangbang: The color input takes precedence over the CSS property |
 
 
 ## Demo
