@@ -2,11 +2,14 @@
   --black: #1a1a1a;
   --black-rgb: rgb(26, 26, 26);
 
-  --white: #d9d9d9;
+  --white: #ededed;
   --white-rgb: rgb(217, 217, 217);
 
-  --grey: #c3c3c3;
-  --grey-rgb: rgb(195, 195, 195);
+  --light-grey: #d1d1d1;
+  --light-grey-rgb: rgb(195, 195, 195);
+
+  --dark-grey: #424242;
+  --dark-grey-rgb: rgb(66, 66, 66);
 
   --blue: #3498DB;
   --blue-rgb: rgb(52, 152, 219);
@@ -21,11 +24,22 @@
   --purple-rgb: rgb(125, 60, 152);
 
   --progress-color: var(--blue);
-  --track-color: var(--grey)
+  --track-color: var(--light-grey)
 }
 
 .black {
   --progress-color: var(--black);
+}
+
+.grey,
+.light-grey{
+  --track-color: var(--dark-grey);
+  --progress-color: var(--light-grey);
+}
+
+.dark-grey {
+  --track-color: var(--dark-grey);
+  --progress-color: var(--light-grey);
 }
 
 .white {
