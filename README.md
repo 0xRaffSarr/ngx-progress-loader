@@ -75,14 +75,16 @@ $ npm install ngx-progress-loader --save
 
 `ngx-progress-loader` is presented with default colors that can be used.
 
-|  Color   |                                                           | Hex Code |  Default   |
-|:--------:|:---------------------------------------------------------:|:--------:|:----------:|
-| `black`  |   ![black!](https://i.ibb.co/JqnC7cT/black.png "black")   | #1a1a1a  |            |
-| `white`  |   ![white!](https://i.ibb.co/jzVRFTP/white.png "white")   | #d9d9d9  |            |
-|  `blue`  |    ![blue!](https://i.ibb.co/LhByBcM/blue.png "blue")     | #3498DB  |    true    |
-| `orange` | ![orange!](https://i.ibb.co/vJDzBCR/orange.png "orange")  | #F39C12  |            |
-| `green`  |   ![green!](https://i.ibb.co/cDcJ1hw/green.png "green")   | #27AE60  |            |
-| `purple` | ![purple!](https://i.ibb.co/Hg6bjXS/purple.png "purple")  | #7D3C98  |            |
+|    Color     | Hex Code |                                                                      |      Default       |
+|:------------:|:--------:|:--------------------------------------------------------------------:|:------------------:|
+|   `black`    | #1a1a1a  |        ![black!](https://i.ibb.co/JqnC7cT/black.png "black")         |                    |
+| `light-grey` | #d1d1d1  | ![light-grey!](https://i.ibb.co/WsCgMdc/light-grey.png "light-grey") |                    |
+| `dark-grey`  | #424242  |  ![dark-grey!](https://i.ibb.co/ZJ8KBWt/dark-grey.png "dark-grey")   |                    |
+|   `white`    | #ededed  |        ![white!](https://i.ibb.co/dkWDHJ6/white.png "white")         |                    |
+|    `blue`    | #3498DB  |          ![blue!](https://i.ibb.co/LhByBcM/blue.png "blue")          | :heavy_check_mark: |
+|   `orange`   | #F39C12  |       ![orange!](https://i.ibb.co/vJDzBCR/orange.png "orange")       |                    |
+|   `green`    | #27AE60  |        ![green!](https://i.ibb.co/cDcJ1hw/green.png "green")         |                    |
+|   `purple`   | #7D3C98  |       ![purple!](https://i.ibb.co/Hg6bjXS/purple.png "purple")       |                    |
 
 The desired color can be indicated via the `color` input. If omitted, the default coloring is used.
 
@@ -103,11 +105,29 @@ Many properties may have been implemented only partially and therefore not avail
 
 You can customize the appearance of your components by editing the CSS custom properties.
 
-| CSS Custom Propriety | Description                                                                                                                                                                                         |       Support       |
-|:---------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------:|
-| `--track-color`      | Allows customization of the loader track color!<br/>Track customization can only be done through the use of custom CSS.                                                                             | :heavy_check_mark:  |
-| `--progress-color`   | Allows you to change the color of the Loader. You can indicate coloring in any format allowed by CSS (`hex`, `rgb/rgba`,...)<br/> :bangbang: The color input takes precedence over the CSS property | :heavy_check_mark:  |
+| CSS Custom Propriety | Description                                                                                                                                                                                         |      Support       |
+|:---------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------:|
+| `--track-color`      | Allows customization of the loader track color!<br/>Track customization can only be done through the use of custom CSS.                                                                             | :heavy_check_mark: |
+| `--progress-color`   | Allows you to change the color of the Loader. You can indicate coloring in any format allowed by CSS (`hex`, `rgb/rgba`,...)<br/> :bangbang: The color input takes precedence over the CSS property | :heavy_check_mark: |
+| `--progress-stroke`  | Determines the width of the track.<br/>Available only for circle type progress                                                                                                                      | :heavy_minus_sign: |
 
+
+
+#### Example
+
+```scss
+  //The change will apply to all components of that type unless there is a more specific rule
+  ngx-progress-loader {
+    --track-color: #3d3737;
+    --progress-color: '#0b667b';
+  }
+
+  //The change will be applied to all components with the custom-color class
+  .custom-color {
+    --track-color: #3d3737;
+    --progress-color: '#0b667b';
+  }
+```
 
 ## Demo
 
