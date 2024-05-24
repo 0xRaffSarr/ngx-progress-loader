@@ -69,6 +69,25 @@ $ npm install ngx-progress-loader --save
 
 ## Configuration
 
+To use the component, you need to import the package. No further configuration is required.
+
+```typescript
+
+import { NgxProgressLoaderComponent } from 'ngx-progress-loader';
+
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [
+    NgxProgressLoaderComponent //Import the component into your project
+  ],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.scss'
+})
+
+```
+
 ## Customization
 
 ### Color
