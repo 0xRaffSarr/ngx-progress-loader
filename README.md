@@ -90,6 +90,10 @@ import { NgxProgressLoaderComponent } from 'ngx-progress-loader';
 
 ## Customization
 
+At the moment it's only possible to offer a slight customization of the component.
+
+More configuration options will be available in future versions of the component.
+
 ### Color
 
 `ngx-progress-loader` is presented with default colors that can be used.
@@ -107,9 +111,6 @@ import { NgxProgressLoaderComponent } from 'ngx-progress-loader';
 
 The desired color can be indicated via the `color` input. If omitted, the default coloring is used.
 
- :bangbang: It isn't currently possible to use `color` input to indicate custom colors. 
- However, you can customize the coloring by using custom CSS rules. For more information see the section
-[Css Customization](#css-customization)
 
 ```angular17html
   <ngx-progress-loader
@@ -117,6 +118,10 @@ The desired color can be indicated via the `color` input. If omitted, the defaul
     color="purple">
   </ngx-progress-loader>
 ```
+
+:bangbang: It isn't currently possible to use `color` input to indicate custom colors.
+However, you can customize the coloring by using custom CSS rules. For more information see the section
+[Css Customization](#css-customization)
 
 ### CSS Customization
 :warning: The library is still under active development!
