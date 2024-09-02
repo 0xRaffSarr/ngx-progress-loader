@@ -82,8 +82,8 @@ div {
       visibility: hidden;
     }
 
-    &.value-indicator {
-      font-size: clamp(5px, 20%, 80%);
+    & .status-display {
+      display: block;
     }
   }
 }

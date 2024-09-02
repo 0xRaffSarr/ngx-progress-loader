@@ -5,9 +5,11 @@ import {
   Input,
   OnChanges,
   OnInit,
+  AfterViewInit,
+  OnDestroy,
   SimpleChanges,
   ViewChild,
-  ViewEncapsulation
+  ViewEncapsulation,
 } from '@angular/core';
 
 import {ProgressLoader} from '../../progress-loader';
@@ -22,7 +24,9 @@ import {ProgressLoader} from '../../progress-loader';
   styleUrls: ['./circle-progress.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class CircleProgressComponent implements OnInit, OnChanges, ProgressLoader {
+export class CircleProgressComponent implements OnInit, OnDestroy, AfterViewInit, OnChanges, ProgressLoader {
+
+  @ViewChild('statusIndicatorRef', {static: true}) private statusIndicator!: ElementRef;
 
   @ViewChild('container', {static: true}) private container!: ElementRef;
   @ViewChild('progress', {static: true}) private progress!: ElementRef;
@@ -32,6 +36,10 @@ export class CircleProgressComponent implements OnInit, OnChanges, ProgressLoade
   @Input() showStatus: boolean = false;
   @Input() infinite: boolean = false;
 
+  private resizeFontObserver!: ResizeObserver;
+
+  private readonly DEFAULT_FONT_SIZE = '1rem';
+  private readonly FONT_SCALING_FACTOR = 0.55;
 
   protected get showContentRef(): boolean {
     return  this.refContent?.nativeElement ? this.refContent?.nativeElement?.children.length > 0 : false;
@@ -43,6 +51,14 @@ export class CircleProgressComponent implements OnInit, OnChanges, ProgressLoade
 
   ngOnInit(): void {
     this.runAnimation();
+  }
+
+  ngAfterViewInit() {
+    this.initializeFontResizeObserver();
+  }
+
+  ngOnDestroy() {
+    if(this.resizeFontObserver) this.resizeFontObserver.disconnect();
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -76,6 +92,29 @@ export class CircleProgressComponent implements OnInit, OnChanges, ProgressLoade
         }
       );
     }
+  }
+
+  private initializeFontResizeObserver() {
+    const container = this.statusIndicator.nativeElement;
+    const textElement = container.querySelector('.status-display');
+
+    const adjustFontSize = () => {
+      textElement.style.fontSize = this.DEFAULT_FONT_SIZE;
+
+      const containerWidth = container.clientWidth;
+
+      const fontSize = ((containerWidth - 5) * this.FONT_SCALING_FACTOR);
+
+      textElement.style.fontSize = fontSize + 'px';
+    }
+
+    this.resizeFontObserver = new ResizeObserver(() => {
+      adjustFontSize();
+    });
+
+    this.resizeFontObserver.observe(container);
+
+    adjustFontSize();
   }
 
 }

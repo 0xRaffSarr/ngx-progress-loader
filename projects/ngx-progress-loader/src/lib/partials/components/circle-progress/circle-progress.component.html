@@ -7,4 +7,7 @@
     <div class="out-content" #refContent [ngClass]="{'hidden': !showContentRef}">
         <ng-content></ng-content>
     </div>
+    <div class="out-content" #statusIndicatorRef [ngClass]="{'hidden': !_showStatus}">
+      <span class="status-display">{{value}}%</span>
+    </div>
 </div>
